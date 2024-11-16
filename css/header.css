@@ -1,0 +1,79 @@
+.header {
+    position: relative;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+    padding: 2rem 8rem;
+}
+
+.header__menu {
+    position: relative;
+    display: flex;
+    flex: 1;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__menu--logo {
+    width: fit-content;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__menu--links {
+    position: relative;
+    display: flex;
+    width: 25rem;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+.header__menu--links li {
+    height: 5rem;
+    align-items: start;
+    justify-content: center;
+}
+
+.header__menu--links li:hover {
+    background:-webkit-linear-gradient(left, var(--lime-green), var( --bright-cyan));
+}
+
+.header__menu--links li a {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--grayish-blue);
+}
+
+.header__menu--links li a:hover {
+    padding-top: 2px;
+    color: var(--dark-blue);
+    background: var(--white);
+    border-bottom: 2px solid black;
+}
+
+.header__menu--button {
+    position: relative;
+    width: fit-content;
+    padding: 0.8rem 3rem;
+    color: var(--white);
+    border-radius: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background:-webkit-linear-gradient(left, var(--lime-green), var( --bright-cyan));
+    cursor: pointer;
+}
+
+.header__menu--button:hover {
+    opacity: 0.8;
+}

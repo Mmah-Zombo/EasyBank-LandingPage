@@ -1,0 +1,5 @@
+.hero {
+    width: 100%;
+    height: calc(100vh - 5rem);
+    background: var(--very-light-gray);
+}
