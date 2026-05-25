@@ -27,6 +27,19 @@ body {
     font-weight: 300;
 }
 
+ul {
+    padding-inline-start: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
 .main {
     width: 100vw;
     height: fit-content;
@@ -34,4 +47,14 @@ body {
 
 .container {
     padding: 4rem 8rem;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.relative {
+    position: relative;
 }

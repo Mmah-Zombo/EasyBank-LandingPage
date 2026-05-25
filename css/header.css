@@ -42,16 +42,11 @@
     justify-content: center;
 }
 
-.header__menu--links li:hover {
-    background:-webkit-linear-gradient(left, var(--lime-green), var( --bright-cyan));
-}
-
 .header__menu--links li a {
     height: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
     color: var(--grayish-blue);
 }
 
@@ -59,7 +54,9 @@
     padding-top: 2px;
     color: var(--dark-blue);
     background: var(--white);
-    border-bottom: 2px solid black;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-image: -webkit-linear-gradient(left, var(--lime-green), var( --bright-cyan)) 1;
 }
 
 .header__menu--button {
@@ -77,3 +74,106 @@
 .header__menu--button:hover {
     opacity: 0.8;
 }
+
+.header__mobile-menu {
+    display: none;
+    visibility: hidden;
+}
+
+.header__mobile-menu--links {
+    display: none;
+    visibility: hidden;
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+    .header {
+        padding: 2rem;
+    }
+
+    .header__menu {
+        display: none;
+        visibility: hidden;
+    }
+
+    .header__mobile-menu {
+        display: flex;
+        visibility: visible;
+        display: flex;
+        flex: 1;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header__mobile-menu:hover {
+        cursor: pointer;
+    }
+
+    .header__mobile-menu::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 50%;
+        width: 100%;
+        height: calc(100vh - 5rem);
+        transform: translate(-50%);
+        margin-top: 5rem;
+        background-color: black;
+        opacity: 0.2;
+    }
+
+    .header__mobile-menu--links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        visibility: visible;
+        position: absolute;
+        z-index: 10;
+        top: 0rem;
+        left: 50%;
+        transform: translate(-50%);
+        width: 20rem;
+        height: 16rem;
+        padding: 1rem 0;
+        margin-top: 6rem;
+        background: var(--white);
+        border-radius: 0.3rem;
+    }
+
+    .header__mobile-menu--links li a {
+        color: var(--dark-blue);
+    }
+
+}
+
+/* Tablets */
+@media (min-width: 600px) and (max-width: 1050px) {
+    .header {
+        padding: 2rem;
+    }
+
+    .header__menu--links {
+       width: 22rem; 
+    }
+
+    .header__menu--button {
+        padding: 0.6rem 2rem;
+    }
+}
+
+/* Desktop */
+/* @media (min-width: 1000px) {
+    .header__menu {
+        display: none;
+        visibility: hidden;
+    }
+
+    .header__mobile-menu {
+        display: flex;
+        visibility: visible;
+    }
+} */
+
